@@ -6,7 +6,7 @@ const Tourism = () => {
     // const [detail] = useContext(store);
     const[data , setData] = useState([])
     useEffect(() => {
-        fetch(`https://supriya-backend.herokuapp.com/api/details`).then(res => res.json())
+        fetch(`https://supriya-node.herokuapp.com/api/details`).then(res => res.json())
         .then(res => setData(res))
     }, [])
     

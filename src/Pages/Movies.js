@@ -8,7 +8,7 @@ const Movies = () => {
     // const [detail] = useContext(store);
     const[data , setData] = useState([])
     useEffect(() => {
-        fetch(`https://supriya-backend.herokuapp.com/api/details`).then(res => res.json())
+        fetch(`https://supriya-node.herokuapp.com/api/details`).then(res => res.json())
         .then(res => setData(res))
     }, [])
     
@@ -19,7 +19,7 @@ const Movies = () => {
             <div className="main__container">
                 <div className='rightbar'>
                     {
-                        data.filter((article) => { return article.category === "Movies" }).map((n) => (
+                        data.filter((article) => { return article.category === "Movie" }).map((n) => (
                             <Card
                                 articleid={n.id}
                                 imgUrl={n.Image}

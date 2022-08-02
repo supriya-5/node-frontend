@@ -9,7 +9,7 @@ const Home = () => {
 
 const[data , setData] = useState([])
     useEffect(() => {
-        fetch(`https://supriya-backend.herokuapp.com/api/details`).then(res => res.json())
+        fetch(`https://supriya-node.herokuapp.com/api/details`).then(res => res.json())
         .then(res => setData(res))
     }, [])
     
@@ -21,7 +21,7 @@ const[data , setData] = useState([])
       
         <div className="home__container">
       <div className="home__first">
-        <Link to ="/Tourism"><img src='"https://steady-custard-d83563.netlify.app/static/media/one1.03953ea0fb9059ceaa0b.png"'alt="Not found"/></Link>
+        <Link to ="/Tourism"><img src="https://steady-custard-d83563.netlify.app/static/media/one1.03953ea0fb9059ceaa0b.png" alt="Not found"/></Link>
       </div>
       <div className="home__sec">
        <Link to="/Technology" > <img src="https://steady-custard-d83563.netlify.app/static/media/imagestech2.30a2553977fbb7a8bf39.jpg" alt="Not found" /></Link>
@@ -48,7 +48,7 @@ const[data , setData] = useState([])
                         ))
                     }
                 </div>
-          <div className='home__left left1'>
+          {/* <div className='home__left left1'>
                     {
                         data.filter((article) => { return article.category === "Home-lastest" }).map((n) => (
                             <CardHome
@@ -62,8 +62,8 @@ const[data , setData] = useState([])
                             />
                         ))
                     }
-                </div>
-          <div className='home__left left1'>
+                </div> */}
+          {/* <div className='home__left left1'>
                     {
                         data.filter((article) => { return article.category === "Home-lastest" }).map((n) => (
                             <CardHome
@@ -77,8 +77,8 @@ const[data , setData] = useState([])
                             />
                         ))
                     }
-                </div>
-                <h1 style={{marginTop:"40px", display : "inline-block"}}>Latest Articles</h1>
+                </div> */}
+                <h1 style={{marginTop:"40px", display : "inline-block"}}>Latest Articles</h1><hr></hr>
                 
                 <h1 className='Top' >Top Posts</h1>
                 <hr style={{width:"200px",  thickness:"20px"}} />
@@ -133,7 +133,7 @@ const[data , setData] = useState([])
                     }
                 </div>
 
-                <div className='home__left'>
+                {/* <div className='home__left'>
                     {
                         data.filter((article) => { return article.category === "Home-post" }).map((n) => (
                             <CardHome
@@ -159,7 +159,7 @@ const[data , setData] = useState([])
                             />
                         ))
                     }
-                </div>
+                </div> */}
                     
     </div>
     </div>
